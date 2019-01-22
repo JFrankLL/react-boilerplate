@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // Utils
-import Connect from '../../../utils/connect';
+import Connect from '../../utils/connect';
 
 class App extends Component {
   _onClickButton = () => {

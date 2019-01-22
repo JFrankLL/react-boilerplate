@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import rootReducer from './redux/reducers';
 import { createLogger } from 'redux-logger';
-// Components
-import App from './views/Containers/App';
+// Routes
+import Routes from './components/Routes';
 
 // Logger with default options
 const logger = createLogger({
@@ -19,7 +19,7 @@ class MainApp extends Component {
   render() {
     return (
       <Provider store={store}>
-        <App />
+        <Routes />
       </Provider>
     );
   }
