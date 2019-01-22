@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // Components
+import PrivateRoute from './PrivateRoute';
 import App from '../../containers/App';
 
 const NoMatch = () => <div>404</div>;
@@ -8,10 +9,11 @@ const NoMatch = () => <div>404</div>;
 const Routes = () => {
   return (
     <BrowserRouter>
-      <div>
+      <Switch>
         <Route exact path="/" component={App} />
-        <Route component={NoMatch} />
-      </div>
+        <PrivateRoute exact path="/private" component={() => <div>private</div>} />
+        <Route path="*" component={NoMatch} />
+      </Switch>
     </BrowserRouter>
   );
 };
