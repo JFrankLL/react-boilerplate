@@ -9,10 +9,11 @@ class App extends Component {
   _onClickButton = () => {
     const {
       rdx: {
-        action: { changeValue, changeValueAsync },
+        action: { changeValue, changeValueAsync, get },
       },
     } = this.props;
 
+    get();
     changeValueAsync('text2', 'changed asyncronously');
     changeValue('text', 'changed');
     changeValue('text3', 'added');

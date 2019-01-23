@@ -1,6 +1,8 @@
 import { createAction } from 'redux-actions';
 import { createActionThunk } from 'redux-thunk-actions';
 
+import { AppV1 } from '../../api';
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -13,3 +15,8 @@ export const changeValueAsync = createActionThunk(
     return { [key]: value };
   },
 );
+
+export const get = createActionThunk('GET', async () => {
+  const result = await AppV1.get();
+  return result.data;
+});
