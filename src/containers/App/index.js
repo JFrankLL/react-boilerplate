@@ -5,7 +5,6 @@ import './App.css';
 // Utils
 import Connect from '../../utils/connect';
 // Components
-import Navbar from '../../components/Navbar';
 
 class App extends Component {
   _onClickButton = () => {
@@ -32,7 +31,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Navbar />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p> Edit <code>src/App.js</code> and save to reload.</p>

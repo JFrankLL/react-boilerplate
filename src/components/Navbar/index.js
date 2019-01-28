@@ -11,7 +11,9 @@ class Navbar extends Component {
       <div className="navbar">
         <div className="navbar-container">
           Navbar
-          <Link to="/private">private</Link>
+          <Link to="/">Home</Link>
+          <Link to="/private">Private</Link>
+          <Link to="/lie">404</Link>
         </div>
       </div>
     );
