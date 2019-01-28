@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 // Styles
 import logo from './logo.svg';
 import './App.css';
 // Utils
 import Connect from '../../utils/connect';
+// Components
+import Navbar from '../../components/Navbar';
 
 class App extends Component {
   _onClickButton = () => {
@@ -31,6 +32,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Navbar />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p> Edit <code>src/App.js</code> and save to reload.</p>
@@ -41,7 +43,6 @@ class App extends Component {
           <button onClick={this._onClickButton}>doSomething()</button>
           <span>{text}</span>
           <span>{text2}</span>
-          <Link to="/private">private</Link>
         </header>
       </div>
     );
