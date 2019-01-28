@@ -5,7 +5,6 @@ import auth from '../../../services/auth';
 
 const renderComponent = (props, Component) => {
   const logged = auth.isLogged();
-  console.log(props);
   if (logged) {
     return <Component {...props} />;
   } else {
@@ -17,9 +16,9 @@ const renderComponent = (props, Component) => {
   }
 };
 
-const PrivateRoute = ({ component, ...rest }) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
-    <Route {...rest} render={props => renderComponent(props, component)} />
+    <Route {...rest} render={props => renderComponent(props, Component)} />
   );
 };
 
