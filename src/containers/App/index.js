@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 // Styles
 import logo from './logo.svg';
 import './App.css';
@@ -33,13 +34,14 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p> Edit <code>src/App.js</code> and save to reload.</p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >
+          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             Learn React
           </a>
 
           <button onClick={this._onClickButton}>doSomething()</button>
           <span>{text}</span>
           <span>{text2}</span>
+          <Link to="/private">private</Link>
         </header>
       </div>
     );
