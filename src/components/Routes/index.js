@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter, Switch, Route, Link,
-} from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 // Components
 import PrivateRoute from './PrivateRoute';
 import App from '../../containers/App';

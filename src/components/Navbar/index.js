@@ -6,6 +6,8 @@ import './NavbarStyles.css';
 import Connect from '../../utils/connect';
 
 class Navbar extends Component {
+  state = {};
+
   render() {
     return (
       <div className="navbar">

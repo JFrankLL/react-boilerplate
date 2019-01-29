@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => {
       if (action.name === 'factory') {
         return action(...args)(dispatch);
       }
-      dispatch(action(...args));
+      return dispatch(action(...args));
     };
   });
   return dispatchActions;
