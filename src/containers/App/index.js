@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 // Styles
 import logo from './logo.svg';
 import './App.css';
@@ -45,7 +46,9 @@ class App extends Component {
             Learn React
           </a>
 
-          <button onClick={this._onClickButton}>doSomething()</button>
+          <button type="button" onClick={this._onClickButton}>
+            doSomething()
+          </button>
           <span>{text}</span>
           <span>{text2}</span>
         </header>
@@ -53,5 +56,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  rdx: PropTypes.shape({}).isRequired,
+};
 
 export default Connect(App);

@@ -8,13 +8,10 @@ function sleep(ms) {
 }
 
 export const changeValue = createAction('VALUE_CHANGE', (key, value) => ({ [key]: value }));
-export const changeValueAsync = createActionThunk(
-  'VALUE_CHANGE_ASYNC',
-  async (key, value) => {
-    await sleep(2048);
-    return { [key]: value };
-  },
-);
+export const changeValueAsync = createActionThunk('VALUE_CHANGE_ASYNC', async (key, value) => {
+  await sleep(2048);
+  return { [key]: value };
+});
 
 export const get = createActionThunk('GET', async () => {
   const result = await AppV1.get();

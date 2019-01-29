@@ -3,17 +3,21 @@ import Navbar from '../Navbar';
 // Styles
 import './styles.css';
 
-const withLayout = Component => class Layout extends React.Component {
-  render() {
-    return (
-      <div className="layout">
-        <div className="layout-content">
-          <Navbar />
-          <Component />
+const withLayout = Component => {
+  return class Layout extends React.Component {
+    state = {};
+
+    render() {
+      return (
+        <div className="layout">
+          <div className="layout-content">
+            <Navbar />
+            <Component />
+          </div>
         </div>
-      </div>
-    );
-  }
+      );
+    }
+  };
 };
 
 export default withLayout;

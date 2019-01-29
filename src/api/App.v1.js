@@ -6,7 +6,7 @@ class App extends Request {
   }
 
   get(n = '') {
-    return this._get('\\' + n, null, { userId: 2, completed: true });
+    return this._get(`\\${n}`, null, { userId: 2, completed: true });
   }
 }
 
