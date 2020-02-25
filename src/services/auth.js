@@ -5,13 +5,13 @@ class AuthService {
 
   isLogged = () => {
     const luck = Math.random(); // Simulates getting a session
-    this.logged = luck < 0.5;
+    this.logged = luck < 0; // ? never
     return this.logged;
   };
 
   signIn = () => {
     const luck = Math.random(); // Simulates getting a session
-    this.logged = luck > 0.5;
+    this.logged = luck > 1; // ? never
     return this.logged;
   };
 
